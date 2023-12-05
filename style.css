@@ -84,7 +84,7 @@ nav{
     font-weight: 400;
     line-height: 26px; /
 }
-.heroPlan{
+.heroPlan{    
     width: 146px;
     height: 40px;
     color: #FFF;
@@ -102,6 +102,9 @@ nav{
     z-index: 2;
 }
 .heroPlan:hover{
+    width: 160px;
+    height: 45px;
+    font-size: 15px;
     background-color: #FFF;
     color: #2C2830;
 }
@@ -217,7 +220,8 @@ footer{
     align-items: center;
     width: 100%;
     padding-bottom: 20px;
-    border-bottom: 1px solid #DADADA;;
+    border-bottom: 1px solid #DADADA;
+    z-index: 10;
 }
 .footerLinks{
     display: flex;
@@ -227,11 +231,13 @@ footer{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 .footerTextBox{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 100%;
+    z-index: 10;
 }
 .footerGridBox{
     display: flex;
@@ -251,7 +257,7 @@ footer{
 .footerText{
     display: flex;
     flex-direction: column;
-    gap:0.5rem;
+    gap:0.7rem;
 }
 .footerText p{
     text-transform: uppercase;
@@ -262,4 +268,145 @@ footer{
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all .55s ease;
+}
+.footerText p:hover{
+    font-size: 15px;
+    color: black;
+}
+.burger{
+    display: none;
+}
+.mobileNav{   
+    height: 90vh;
+    background: #2C2830;
+    z-index: 3;
+}
+.hidden{
+    display: none;
+}
+.mobileLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    gap: 2rem;  
+    
+}
+.mobileLink a{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Karla';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 200% */
+    letter-spacing: 1.364px;
+    transition: all .55s ease;
+}
+.mobileLink a.plan{
+    color: #FFF;
+    border: 1.5px solid #FFF;
+    padding: 13px;
+}
+.mobileLink a:hover{    
+    font-size: 15px;
+}
+.mobileLink a.plan:hover{
+    color: #FFF;
+    background: #2C2830;
+}
+@media (max-width: 400px) {
+    .hero{
+        grid-template-columns: 1fr;
+        padding: 0px 0px;
+        height: 1200px;
+        row-gap: px;        
+    }
+    .navLinks{
+        display: none;
+    }
+    .burger{
+        display: block;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+    .heroLeft{
+        align-items: center;
+        text-align: center;
+        width: 100vw;
+        height: 500px;
+        order: 2;
+    }
+   .heroLeft h1{
+    font-size: 48px;
+   }
+   .heroLeft p{
+    font-size: 16px;
+   }
+   .heroimg{
+    height: 465px;
+    width: 100%;
+   }
+   .bg-right{
+    top: 800px;
+   }
+   .bg-left{
+    top: 465px;
+   }
+   .diff{
+        padding: 60px 0px;
+        height: 1600px;
+        text-align: center;
+       
+   }
+   .diffText{
+        width: 100vw;
+        height: auto;
+   }
+   .diffText h1{
+        font-size: 48px;
+    }
+    .diffGrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        padding-top: 20px;
+    }
+    .gridBox{
+        width: 100vw;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    .diffFooter{
+        width: 90vw;
+        flex-direction: column;
+        height: 344px;
+        align-items: center;
+        
+    }
+    .diffFooter h1{
+        font-size: 40px;
+    }
+    footer{
+        height: 1025px;
+        justify-content: start;
+    }
+    .linkBox{
+        flex-direction: column;
+        gap: 1.5rem;
+        
+    }
+    .footerTextBox{
+        grid-template-columns: 1fr;
+        padding-top: 2rem;
+        row-gap: 3rem;        
+        text-align: center;
+    }
 }
